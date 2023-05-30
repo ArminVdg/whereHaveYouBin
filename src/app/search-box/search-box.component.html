@@ -1,7 +1,16 @@
 <p>search-box works!</p>
-<button type="button" class="btn btn-show-bins" onclick="showAllBins()">
+<p>Latitude: {{ lat }}</p>
+<p>Longitude: {{ lng }}</p>
+
+<button type="button" class="btn btn-show-bins" (click)="showAllBins()">
   Show all bins
 </button>
-<button type="button" class="btn btn-show-location" onclick="showLocation()">
-  Show my location
+<button type="button" class="btn btn-show-location" (click)="getLocation()">
+  Get my location
 </button>
+<div id="map"></div>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<!-- <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> -->
